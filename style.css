@@ -46,13 +46,6 @@ a {
 	text-decoration: none;
 }
 
-a:hover {
-}
-
-a:visited {
-
-}
-
 /* Навигация справа + анимация*/
 
 .navigation {
@@ -159,17 +152,53 @@ a:visited {
 	transition: width 0.5s;
 }
 
-
 /* Верхняя картинка + анимация к ней */
-.imgUpper img {
+
+/* .secondUpperImg {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.secondUpperImg img {
 	width: 100%;
-	animation: imgUpper;
-	animation-duration: 6s;
-	animation-timing-function: ease-in;
-	filter: drop-shadow(0px 2px 10px #ffff00);
+	animation: secondImg 20s infinite ease-in;
 }
 
-@-webkit-keyframes imgUpper {
+.thirdUpperImg {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.thirdUpperImg img {
+	width: 100%;
+	animation: thirdImg 20s infinite ease-in;
+}
+
+@keyframes secondImg {
+
+}
+
+@keyframes thirdImg {
+
+} */
+
+.imgUpper img {
+	width: 100%;
+	animation: imgUpper 6s ease-in;
+	filter: drop-shadow(0px 2px 10px #f1b1fe);
+}
+
+@keyframes imgUpper {
+0% {
+	opacity: 0;
+}
+100% {
+	opacity: 1;
+}
+}
+
+/* @-webkit-keyframes imgUpper {
 	0% {
 		opacity: 0;
 	}
@@ -197,17 +226,9 @@ a:visited {
 	100% {
 		opacity: 1;
 	}
-}
+} */
 
-@keyframes imgUpper {
-	0% {
-		opacity: 0;
-	}
 
-	100% {
-		opacity: 1;
-	}
-}
 
 /* Социальки + их анимация */
 .socials {
@@ -245,10 +266,10 @@ a:visited {
 
 .socials img {
 	block-size: calc(var(--index) * 3);
-	-webkit-transition: all 1s cubic-bezier(.29, .66, .84, .58) 0s;
-	-moz-transition: all 1s cubic-bezier(.29, .66, .84, .58) 0s;
-	-o-transition: all 1s cubic-bezier(.29, .66, .84, .58) 0s;
-	transition: all 1s cubic-bezier(.29, .66, .84, .58) 0s;
+	-webkit-transition: all 1s ease 0s;
+	-moz-transition: all 1s ease 0s;
+	-o-transition: all 1s ease 0s;
+	transition: all 1s ease 0s;
 }
 
 .socials img:hover {
@@ -511,18 +532,24 @@ a:visited {
 	position: fixed;
 	right: 10px;
 	bottom: 10px;
+	transition: 0.5s;
 }
 
 .goUp img {
-	height: calc(var(--index) * 5);
-	height: calc(var(--index) * 5);
-	transform: rotate(70deg);
+	height: calc(var(--index) * 7);
+	transform: rotate(-70deg);
 	animation: rotationGoUp 40s infinite linear;
 	filter: drop-shadow(0px 0px 3px rgb(255, 255, 0, 0.8));
 }
 
+.goUp:hover {
+	transition: 1s;
+	transform: rotate(360deg) scale(1.2);
+}
+
+
 @-webkit-keyframes rotationGoUp{
-	100% {transform: rotate(-290deg);}
+	100% {transform: rotate(290deg);}
 }
 
 @-moz-keyframes rotationGoUp{
@@ -534,25 +561,17 @@ a:visited {
 }
 
 @keyframes rotationGoUp {
-	100%{transform: rotate(-290deg);}
+	100%{transform: rotate(290deg);}
 }
 
-/* .welcome {
-	position: absolute;
-	left: calc(var(--index) * 19);
-	top: calc(var(--index) * 17);
-	text-shadow: 10px 10px 20px #ffff00;
-	transition: 1s;
-} */
-
 .leftSideShadow {
-	filter: drop-shadow(2px 2px 10px #ffff00);
+	filter: drop-shadow(2px 2px 10px #f1b1fe);
 }
 
 .rightSideShadow {
-	filter: drop-shadow(-2px -2px 10px #ffff00);
+	filter: drop-shadow(-2px -2px 10px #f1b1fe);
 }
-
+/* f1b1febb */
 .lovenseShadow {
 	filter: drop-shadow(0 0 10px #FF2D89);
 }
