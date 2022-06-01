@@ -16,24 +16,31 @@ html {
 }
 
 body {
-	background-color: #000;
+	background-color: rgba(0, 0, 0, 0.95);
 }
 
 h1 {
-	color: rgb(217, 135, 255);
+	color: #d987ff;
 	opacity: 0.7;
 	font-size: calc(var(--index) * 3);
+	filter: drop-shadow(2px 5px 5px #9B62B6);
 }
 
 p {
-	color: rgb(241, 177, 254);
+	color: #f1b1fe;
 	opacity: 0.7;
+	filter: drop-shadow(2px 5px 5px #9B62B6);
 }
 
 li {
-	color: rgb(255, 154, 154);
+	color: #ff9a9a;
 	font-size: calc(var(--index) * .75);
+	filter: drop-shadow(2px 2px 5px #ff3838);
 }
+
+/* img {
+	filter: drop-shadow(-2px -2px 10px #ffff0088);
+} */
 
 a {
 	text-decoration: none;
@@ -52,7 +59,7 @@ a:visited {
 	position: fixed;
 	left: 10px;
 	top: 70%;
-	border: 1px solid purple;
+	border: 1px solid #800080;
 	border-radius: calc(var(--index) * .75);
 	padding: calc(var(--index) * .50);
 	line-height: calc(var(--index)*1.8);
@@ -118,7 +125,7 @@ a:visited {
 	bottom: -3px;
 	width: 0;
 	height: 2px;
-	background-color: rgb(255, 0, 255);
+	background-color: #ff00ff;
 	transition: width 0.5s;
 }
 
@@ -131,12 +138,12 @@ a:visited {
 	left: 0;
 	bottom: -3px;
 	height: 2px;
-	background-color:rgb(255, 255, 0);
+	background-color:#ffff00;
 	transition: width 0.5s;
 }
 /* Цвет текста в навигации */
 .navigation p:hover {
-	color: rgb(255, 255, 0);
+	color: #ffff00;
 }
 
 /* смена цвета линии при клике */
@@ -148,7 +155,7 @@ a:visited {
 	left: 0;
 	bottom: -3px;
 	height: 2px;
-	background-color:rgb(255, 0, 0);
+	background-color:#ff0000;
 	transition: width 0.5s;
 }
 
@@ -159,6 +166,7 @@ a:visited {
 	animation: imgUpper;
 	animation-duration: 6s;
 	animation-timing-function: ease-in;
+	filter: drop-shadow(0px 2px 10px #ffff00);
 }
 
 @-webkit-keyframes imgUpper {
@@ -215,6 +223,18 @@ a:visited {
 	margin-right: auto;
 }
 
+.socialsFlex div:nth-child(1) {
+	filter: drop-shadow(1px 1px 20px #CE235C);
+}
+
+.socialsFlex div:nth-child(2) {
+	filter: drop-shadow(1px 1px 15px #6BABE1);
+}
+
+.socialsFlex div:nth-child(3) {
+	filter: drop-shadow(1px 1px 20px #008000);
+}
+
 .socials h1 {
 	text-align: center;
 	margin-top: calc(var(--index) * 7);
@@ -268,7 +288,7 @@ a:visited {
 
 .about img {
 	/* position: relative; */
-	width: calc(var(--index) *  var(--side-small));
+	/* width: calc(var(--index) *  var(--side-small)); */
 	height: calc(var(--index) * var(--side-big));
 }
 
@@ -279,10 +299,16 @@ a:visited {
 .aboutbody .box {
 	width: 80%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#nopadding {
+	position: relative;
+	bottom: calc(var(--index)* -1);
+	right: calc(var(--index)* 1.5);
 }
 
 .aboutbody div {
@@ -301,7 +327,7 @@ a:visited {
 
 .aboutbody img {
 	/* position: relative; */
-	width: calc(var(--index) *  var(--side-small));
+	/* width: calc(var(--index) *  var(--side-small)); */
 	height: calc(var(--index) * var(--side-big));
 }
 
@@ -423,6 +449,45 @@ a:visited {
 	justify-content: center;
 }
 
+.gifts img {
+	margin-top: calc(var(--index) * .7);
+	width: calc(var(--index) * 2);
+	animation: shakeLovense 4s infinite ease-in-out;
+}
+.gifts img:hover {
+	animation: biggerLovense 1s ease;
+}
+
+@-webkit-keyframes biggerLovense {
+	0% {transform: scale(1);}
+	100% {transform: scale(1.2);}
+}
+
+@-moz-keyframes biggerLovense {
+	0% {transform: scale(1);}
+	100% {transform: scale(1.2);}
+}
+
+@-o-keyframes biggerLovense {
+	0% {transform: scale(1);}
+	100% {transform: scale(1.2);}
+}
+
+@keyframes biggerLovense {
+	0% {transform: scale(1);}
+	100% {transform: scale(1.2);}
+}
+
+@keyframes shakeLovense {
+	0% {transform: rotate(0deg);}
+	5% {transform: rotate(25deg);}
+	10% {transform: rotate(-15deg);}
+	15% {transform: rotate(10deg);}
+	20% {transform: rotate(-5deg);}
+	25% {transform: rotate(0deg);}
+	100% {transform: rotate(0deg);}
+}
+
 .rules {
 	width: 80%;
 	display: flex;
@@ -453,8 +518,41 @@ a:visited {
 	height: calc(var(--index) * 5);
 	transform: rotate(70deg);
 	animation: rotationGoUp 40s infinite linear;
+	filter: drop-shadow(0px 0px 3px rgb(255, 255, 0, 0.8));
+}
+
+@-webkit-keyframes rotationGoUp{
+	100% {transform: rotate(-290deg);}
+}
+
+@-moz-keyframes rotationGoUp{
+	100%{transform: rotate(-290deg);}
+}
+
+@-o-keyframes rotationGoUp{
+	100%{transform: rotate(-290deg);}
 }
 
 @keyframes rotationGoUp {
 	100%{transform: rotate(-290deg);}
+}
+
+/* .welcome {
+	position: absolute;
+	left: calc(var(--index) * 19);
+	top: calc(var(--index) * 17);
+	text-shadow: 10px 10px 20px #ffff00;
+	transition: 1s;
+} */
+
+.leftSideShadow {
+	filter: drop-shadow(2px 2px 10px #ffff00);
+}
+
+.rightSideShadow {
+	filter: drop-shadow(-2px -2px 10px #ffff00);
+}
+
+.lovenseShadow {
+	filter: drop-shadow(0 0 10px #FF2D89);
 }
