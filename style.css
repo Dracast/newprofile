@@ -154,14 +154,16 @@ a {
 
 /* Верхняя картинка + анимация к ней */
 
-/* .secondUpperImg {
+.secondUpperImg {
 	position: absolute;
 	left: 0;
 	top: 0;
 }
 .secondUpperImg img {
 	width: 100%;
-	animation: secondImg 20s infinite ease-in;
+	opacity: 0;
+	animation: secondImg 12s infinite ease-in;
+	animation-delay: 6s;
 }
 
 .thirdUpperImg {
@@ -172,20 +174,39 @@ a {
 
 .thirdUpperImg img {
 	width: 100%;
-	animation: thirdImg 20s infinite ease-in;
+	opacity: 0;
+	animation: thirdImg 12s infinite ease-in;
+	animation-delay: 12s;
 }
 
 @keyframes secondImg {
-
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 
 @keyframes thirdImg {
-
-} */
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
 
 .imgUpper img {
 	width: 100%;
-	animation: imgUpper 6s ease-in;
+	opacity: 0;
+	animation: imgUpper 12s infinite ease-in;
 	filter: drop-shadow(0px 2px 10px #f1b1fe);
 }
 
@@ -193,8 +214,11 @@ a {
 0% {
 	opacity: 0;
 }
-100% {
+50% {
 	opacity: 1;
+}
+100% {
+	opacity: 0;
 }
 }
 
@@ -543,7 +567,7 @@ a {
 }
 
 .goUp:hover {
-	transition: 1s;
+	transition: 0.5s;
 	transform: rotate(360deg) scale(1.2);
 }
 
