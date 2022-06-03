@@ -154,99 +154,56 @@ a {
 
 /* Верхняя картинка + анимация к ней */
 
-.secondUpperImg {
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-.secondUpperImg img {
-	width: 100%;
-	opacity: 0;
-	animation: secondImg 12s infinite ease-in;
-	animation-delay: 6s;
+.imgUpper {
+  width: 100vw;
+  height: 100vh;
+  background: url(images/LowAlinaPhotos/4275.jpg) no-repeat;
+  background-position: top center;
+  background-size: cover;
+  animation: imgUpper 40s infinite;
 }
 
-.thirdUpperImg {
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-
-.thirdUpperImg img {
-	width: 100%;
-	opacity: 0;
-	animation: thirdImg 12s infinite ease-in;
-	animation-delay: 12s;
-}
-
-@keyframes secondImg {
-	0% {
-		opacity: 0;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
-}
-
-@keyframes thirdImg {
-	0% {
-		opacity: 0;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
-}
-
-.imgUpper img {
-	width: 100%;
-	opacity: 0;
-	animation: imgUpper 12s infinite ease-in;
-	filter: drop-shadow(0px 2px 10px #f1b1fe);
-}
+/* .imgUpper img {
+  width: 100%;
+  opacity: 0;
+  transition: 3s;
+  animation: imgUpper 30s infinite ease-in;
+} */
 
 @keyframes imgUpper {
-0% {
-	opacity: 0;
-}
-50% {
-	opacity: 1;
-}
-100% {
-	opacity: 0;
-}
+	20% {
+	}
+ 33% {
+  background-image: url(images/1582033120_4k-eagle_vsthemes_ru-4.jpg);
+ }
+ 40% {
+  background-image: url(images/1582033120_4k-eagle_vsthemes_ru-4.jpg)
+ }
+ 77% {
+  background-image: url(images/140209-korshun-zolotoj_orel-accipitriformes-klyuv-orel-3840x2160.jpg);
+ }
 }
 
 /* @-webkit-keyframes imgUpper {
 	0% {
 		opacity: 0;
 	}
-
 	100% {
 		opacity: 1;
 	}
 }
-
 @-moz-keyframes imgUpper {
 	0% {
 		opacity: 0;
 	}
-
 	100% {
 		opacity: 1;
 	}
 }
-
 @-o-keyframes imgUpper {
 	0% {
 		opacity: 0;
 	}
-
 	100% {
 		opacity: 1;
 	}
@@ -290,18 +247,18 @@ a {
 
 .socials img {
 	block-size: calc(var(--index) * 3);
-	-webkit-transition: all 1s ease 0s;
-	-moz-transition: all 1s ease 0s;
-	-o-transition: all 1s ease 0s;
-	transition: all 1s ease 0s;
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
 }
 
 .socials img:hover {
-	-webkit-transform: scale(1.3);
-	-moz-transform: scale(1.3);
-	-ms-transform: scale(1.3);
-	-o-transform: scale(1.3);
-	transform: scale(1.3);
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
 }
 
 .about {
@@ -498,9 +455,13 @@ a {
 	margin-top: calc(var(--index) * .7);
 	width: calc(var(--index) * 2);
 	animation: shakeLovense 4s infinite ease-in-out;
+	animation-delay: 2s;
+	transition: 0.5s;
 }
 .gifts img:hover {
-	animation: biggerLovense 1s ease;
+	transform: scale(1.2);
+	transition: 1s;
+	animation: biggerLovense 0.5s ease;
 }
 
 @-webkit-keyframes biggerLovense {
@@ -568,9 +529,8 @@ a {
 
 .goUp:hover {
 	transition: 0.5s;
-	transform: rotate(360deg) scale(1.2);
+	transform: scale(1.1);
 }
-
 
 @-webkit-keyframes rotationGoUp{
 	100% {transform: rotate(290deg);}
@@ -598,4 +558,26 @@ a {
 /* f1b1febb */
 .lovenseShadow {
 	filter: drop-shadow(0 0 10px #FF2D89);
+}
+
+.footer_links {
+	width: 80%;
+	margin: 100px auto 20px auto;
+}
+
+.footer_links p {
+	text-align: center;
+	font-size: calc(var(--index) * 1);
+	opacity: 1;
+	margin: 20px auto 5px auto;
+}
+
+.footer_links a {
+	transition: 0.5s;
+}
+
+.footer_links a:hover {
+	transition: 0.5s;
+	color: green;
+	filter: drop-shadow(2px 5px 5px green);
 }
