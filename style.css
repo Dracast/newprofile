@@ -190,7 +190,7 @@ a {
 }
 .imgUpper > div:nth-child(2) {
 	background-image: url(images/LowAlinaPhotos/2.jpg);
-	background-position:top center;
+	background-position: 50% 13%;
 	animation-delay: 6s;
 }
 .imgUpper > div:nth-child(3) {
